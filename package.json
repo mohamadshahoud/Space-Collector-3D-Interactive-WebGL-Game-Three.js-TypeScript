@@ -1,0 +1,24 @@
+{
+  "name": "space_game",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/three": "^0.184.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.12"
+  },
+  "dependencies": {
+    "three": "^0.184.0"
+  },
+  "description": "**Dynamic Asteroid Fields:** Generate space rocks of various sizes moving in random directions. The player loses points or time upon collision.\r **Floating Space Debris:** Static or rotating obstacles, such as satellite wreckage or abandoned spaceships, requiring sharp maneuvers to avoid.\r  **Time Extension Crystals:** Glowing green crystalline objects that grant the player +5 additional seconds when collected, saving them before the timer expires.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,182 @@
+/* --- Welcome & Settings screen styling --- */
+.ui-overlay {
+    position: fixed !important;
+    top: 0 !important; left: 0 !important;
+    width: 100vw !important; height: 100vh !important;
+    background: rgba(2, 2, 8, 0.96) !important; 
+    backdrop-filter: blur(12px) !important; 
+    display: flex !important; justify-content: center !important; align-items: center !important;
+    padding: 30px !important; z-index: 77777 !important; color: #ffffff !important; direction: rtl !important; 
+}
+
+.welcome-box {
+    background: linear-gradient(135deg, #07071a 0%, #111130 100%) !important;
+    padding: 50px 60px !important; border-radius: 25px !important;
+    box-shadow: 0 0 60px rgba(0, 212, 255, 0.4) !important; border: 2px solid #333366 !important;
+    text-align: center !important; max-width: 11000px !important; 
+    width: min(95vw, 11000px) !important; height: 1150px !important; pointer-events: auto !important;
+}
+
+.welcome-box h1, #settings-screen h1 {
+    color: #00d4ff !important; margin: 0 0 10px 0 !important;
+    font-size: 5rem !important; font-weight: 900 !important;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.4) !important; text-transform: uppercase !important;
+}
+
+.welcome-box .subtitle, #settings-screen .subtitle { color: #a0a0cc !important; margin: 0 0 35px 0 !important; font-size: 4rem !important; }
+
+.instructions, #settings-screen .instructions {
+    text-align: right !important; background: rgba(255, 255, 255, 0.05) !important;
+    padding: 30px !important; border-radius: 15px !important; margin-bottom: 35px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important; display: flex !important; flex-direction: column !important; gap: 25px !important;
+}
+
+.instructions h3 { margin: 0 0 20px 0 !important; color: #871616 !important; font-size: 5rem !important; font-weight: 900 !important; }
+.instructions li { margin-bottom: 16px !important; font-size: 4rem !important; line-height: 1.6 !important; color: #e6e6ff !important; }
+.instructions strong, #settings-screen #vol-txt {
+    color: #00d4ff !important; font-family: monospace !important; 
+    background: rgba(0, 212, 255, 0.15) !important; padding: 4px 15px !important;
+    border-radius: 6px !important; font-size: 4rem !important; border: 1px solid rgba(0, 212, 255, 0.3) !important;
+}
+
+#start-game-btn, #open-settings-btn, #close-settings-btn {
+    background: #871616 !important; color: white !important; border: none !important;
+    padding: 16px 70px !important; font-size: 3rem !important; font-weight: 900 !important;
+    border-radius: 40px !important; cursor: pointer !important; pointer-events: auto !important;
+    transition: all 0.2s ease-in-out !important; box-shadow: 0 8px 25px rgba(255, 0, 234, 0.5) !important;
+}
+#start-game-btn:hover, #open-settings-btn:hover, #close-settings-btn:hover {
+    background: #00d4ff !important; box-shadow: 0 8px 35px rgba(0, 212, 255, 0.6) !important; transform: translateY(-4px) scale(1.03) !important;
+}
+
+/* ==========================================================================
+   ⚙️ تعديل شاشة الإعدادات حصرياً (تم حل مشكلة عدم عمل الزر والشاشة السوداء)
+   ========================================================================== */
+/* ==========================================================================
+   ⚙️ تعديل شاشة الإعدادات حصرياً (تكبير متناسق ومريح)
+   ========================================================================== */
+
+#settings-screen {
+    display: none; 
+    background: linear-gradient(135deg, #07071a 0%, #111130 100%) !important;
+    padding: 45px 50px !important; /* زيادة الحشوة الداخلية لإعطاء مساحة أكبر */
+    border-radius: 25px !important;
+    box-shadow: 0 0 50px rgba(0, 212, 255, 0.3) !important; 
+    border: 2px solid #333366 !important;
+    text-align: center !important; 
+    max-width: 1100px !important;
+    width: 130vw !important; 
+    height: auto !important; 
+    pointer-events: auto !important;
+    flex-direction: column !important;
+    gap: 40px !important; /* زيادة المسافة بين عناصر الإعدادات */
+    box-sizing: border-box !important;
+}
+
+/* تكبير متناسق للعناوين والخطوط */
+#settings-screen h1 {
+    font-size: 4.8rem !important; /* تكبير عنوان شاشة الإعدادات */
+    margin-bottom: 8px !important;
+}
+#settings-screen .subtitle {
+    font-size: 2.3rem !important;
+    margin-bottom: 12px !important;
+}
+#settings-screen #vol-txt {
+    font-size: 2.1rem !important; /* تكبير مؤشر رقم الصوت */
+    padding: 4px 12px !important;
+    display: inline-block !important;
+    margin-right: 8px !important;
+}
+
+/* المجموعات الداخلية وعناصر التحكم */
+#settings-screen .settings-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 25px !important;
+    text-align: left !important; 
+}
+#settings-screen .settings-group label { 
+    display: block !important; 
+    margin-bottom: 8px !important; 
+    color: #e6e6ff !important; 
+    font-size: 2.3rem !important; /* تكبير نصوص العناوين مثل Volume و Difficulty */
+    font-weight: bold !important; 
+}
+
+#settings-screen select {
+    width: 100% !important; 
+    padding: 14px 22px !important; /* زيادة حجم صندوق الخيارات */
+    background: rgba(5, 5, 20, 0.95) !important;
+    color: #fff !important; 
+    border: 2px solid #333366 !important; 
+    border-radius: 12px !important;
+    font-family: inherit !important; 
+    font-size: 2.15rem !important; 
+    font-weight: bold !important; 
+    cursor: pointer !important;
+}
+
+#settings-screen input[type="range"] { 
+    -webkit-appearance: none !important; 
+    appearance: none !important; 
+    width: 100% !important; 
+    background: #050515 !important; 
+    height: 10px !important; /* تسميك شريط الصوت قليلاً */
+    border-radius: 6px !important; 
+    border: 1px solid #333366 !important; 
+    margin: 12px 0 !important;
+}
+#settings-screen input[type="range"]::-webkit-slider-thumb { 
+    -webkit-appearance: none !important; 
+    appearance: none !important; 
+    width: 26px !important; /* تكبير الدائرة الساحبة للصوت */
+    height: 26px !important; 
+    border-radius: 50% !important; 
+    background: #871616 !important; 
+    cursor: pointer !important; 
+    box-shadow: 0 0 12px #871616 !important; 
+    border: 2px solid #fff !important; 
+}
+
+#settings-screen .settings-group-checkbox { 
+    display: flex !important; 
+    align-items: center !important; 
+    gap: 25px !important; 
+    cursor: pointer !important; 
+    text-align: left !important;
+    font-size: 1.2rem !important; /* تكبير نص Mute Audio */
+}
+#settings-screen input[type="checkbox"] { 
+    appearance: none !important; 
+    -webkit-appearance: none !important; 
+    position: relative !important;
+    width: 50px !important; /* تكبير مربع الاختيار */
+    height: 50px !important; 
+    border: 2px solid #333366 !important; 
+    border-radius: 7px !important; 
+    background: rgba(5, 5, 20, 0.8) !important; 
+    cursor: pointer; 
+}
+#settings-screen input[type="checkbox"]:checked { 
+    background: #871616 !important; 
+    border-color: #871616 !important; 
+}
+#settings-screen input[type="checkbox"]:checked::after { 
+    content: "✓" !important; 
+    position: absolute !important; 
+    color: white !important; 
+    font-size: 1.1rem !important; 
+    font-weight: 900 !important; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%) !important; 
+}
+
+/* زر الحفظ (CLOSE) متناسق مع الحجم الجديد */
+#settings-screen #close-settings-btn {
+    width: 100% !important;
+    padding: 16px 40px !important; /* زيادة حشوة الزر ليصبح أضخم وأسهل في الضغط */
+    font-size: 1.3rem !important;
+    border-radius: 35px !important;
+    margin-top: 15px !important;
+}
